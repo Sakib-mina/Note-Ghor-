@@ -122,7 +122,7 @@ class CoinFragment : Fragment(), PurchasesUpdatedListener {
 
             billingClient.consumeAsync(consumeParams) { billingResult, _ ->
                 if (billingResult.responseCode == BillingClient.BillingResponseCode.OK) {
-                    // Successfully consumed, now add coins to user
+                    // Successfully consumed, add coins
                     val coins = when (purchase.products.firstOrNull()) {
                         "coins_30" -> 30
                         "coins_61" -> 61
@@ -136,7 +136,7 @@ class CoinFragment : Fragment(), PurchasesUpdatedListener {
                     }
                     addCoinsToUser(coins)
                 } else {
-                    Toast.makeText(requireContext(), "Failed to consume purchase: ${billingResult.debugMessage}", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), "Purchase failed: ${billingResult.debugMessage}", Toast.LENGTH_SHORT).show()
                 }
             }
         }
@@ -145,11 +145,13 @@ class CoinFragment : Fragment(), PurchasesUpdatedListener {
     private fun addCoinsToUser(coins: Int) {
         val user = authViewModel.getCurrentUser() ?: return
         lifecycleScope.launch {
+            // get current coins from Firebase
             val currentCoins = noteViewModel.getUserData(user.uid)?.coins ?: 0
             noteViewModel.updateUserCoins(user.uid, currentCoins + coins)
             Toast.makeText(requireContext(), "$coins coins added!", Toast.LENGTH_SHORT).show()
         }
     }
+
 
     private fun setupClickListeners() {
         binding.btnBuy30.setOnClickListener { launchPurchase("coins_30") }

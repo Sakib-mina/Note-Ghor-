@@ -214,6 +214,7 @@ class DashboardFragment : Fragment() {
     // -------------------------------
     // Coins
     // -------------------------------
+    @SuppressLint("SetTextI18n")
     private fun observeUserCoins(uid: String) {
         lifecycleScope.launch {
             noteViewModel.getUserDataFlow(uid).collect { userData ->
