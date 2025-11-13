@@ -116,23 +116,29 @@ class CoinFragment : Fragment(), PurchasesUpdatedListener {
 
     private fun handlePurchase(purchase: Purchase) {
         if (purchase.purchaseState == Purchase.PurchaseState.PURCHASED) {
-            val acknowledgeParams = AcknowledgePurchaseParams.newBuilder()
+            val consumeParams = ConsumeParams.newBuilder()
                 .setPurchaseToken(purchase.purchaseToken)
                 .build()
-            billingClient.acknowledgePurchase(acknowledgeParams) {}
 
-            val coins = when (purchase.products.firstOrNull()) {
-                "coins_30" -> 30
-                "coins_61" -> 61
-                "coins_122" -> 122
-                "coins_183" -> 183
-                "coins_244" -> 244
-                "coins_305" -> 305
-                "coins_610" -> 610
-                "coins_915" -> 915
-                else -> 0
+            billingClient.consumeAsync(consumeParams) { billingResult, _ ->
+                if (billingResult.responseCode == BillingClient.BillingResponseCode.OK) {
+                    // Successfully consumed, now add coins to user
+                    val coins = when (purchase.products.firstOrNull()) {
+                        "coins_30" -> 30
+                        "coins_61" -> 61
+                        "coins_122" -> 122
+                        "coins_183" -> 183
+                        "coins_244" -> 244
+                        "coins_305" -> 305
+                        "coins_610" -> 610
+                        "coins_915" -> 915
+                        else -> 0
+                    }
+                    addCoinsToUser(coins)
+                } else {
+                    Toast.makeText(requireContext(), "Failed to consume purchase: ${billingResult.debugMessage}", Toast.LENGTH_SHORT).show()
+                }
             }
-            addCoinsToUser(coins)
         }
     }
 
