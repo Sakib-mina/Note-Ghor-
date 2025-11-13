@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_theme_background"
+    tools:context=".ui.frgament.AddNoteFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/md_theme_surface"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar_create"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            app:contentInsetStartWithNavigation="0dp">
+
+            <ImageButton
+                android:id="@+id/btn_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Close Editor"
+                android:src="@drawable/ic_back_24"
+                app:tint="@color/md_theme_onSurface"
+                tools:ignore="HardcodedText,TouchTargetSizeCheck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Note Ghor"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16ssp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_save_note"
+                style="@style/Widget.Material3.Button.TextButton.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="8dp"
+                android:text="Save"
+                android:textColor="@color/md_theme_onPrimary"
+                app:backgroundTint="@color/md_theme_primary"
+                app:icon="@drawable/ic_save_24"
+                app:iconTint="@color/md_theme_onPrimary"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_delete"
+                style="@style/Widget.Material3.Button.TextButton.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="8dp"
+                android:text="Delete"
+                android:textColor="@color/md_theme_onPrimary"
+                app:backgroundTint="@color/md_theme_primary"
+                app:icon="@drawable/ic_delete_24"
+                app:iconTint="@color/md_theme_onPrimary"
+                tools:ignore="HardcodedText" />
+
+        </com.google.android.material.appbar.MaterialToolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="16dp">
+
+            <EditText
+                android:id="@+id/et_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="Note Title..."
+                android:inputType="textCapSentences"
+                android:paddingBottom="12dp"
+                android:textColor="@color/md_theme_onSurface"
+                android:textColorHint="@color/md_theme_onSurface"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                tools:ignore="Autofill,HardcodedText,VisualLintTextFieldSize" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/md_theme_surface" />
+
+            <EditText
+                android:id="@+id/et_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:gravity="top"
+                android:hint="Start writing your flow here..."
+                android:inputType="textMultiLine"
+                android:lineSpacingExtra="4dp"
+                android:minHeight="400dp"
+                android:textColor="@color/md_theme_onSurface"
+                android:textColorHint="@color/md_theme_onSurface"
+                android:textSize="18sp"
+                tools:ignore="Autofill,HardcodedText,VisualLintTextFieldSize" />
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:cardBackgroundColor="@color/md_theme_surface"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:background="@drawable/bottom_bg"
+            android:elevation="0dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp">
+
+            <!-- Bold Button -->
+            <ImageButton
+                android:id="@+id/bold"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:contentDescription="Bold"
+                android:src="@drawable/ic_bold_24"
+                tools:ignore="HardcodedText" />
+
+            <!-- Italic Button -->
+            <ImageButton
+                android:id="@+id/italic"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:contentDescription="Italic"
+                android:src="@drawable/ic_italic_24"
+                tools:ignore="HardcodedText" />
+
+            <!-- Underline Button -->
+            <ImageButton
+                android:id="@+id/underline"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:contentDescription="Underline"
+                android:src="@drawable/ic_underlined_24"
+                tools:ignore="HardcodedText" />
+
+            <!-- Spacer -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <!-- Lock Button -->
+            <ImageButton
+                android:id="@+id/iv_lock"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Lock Note (5 Coins)"
+                android:padding="12dp"
+                android:src="@drawable/ic_lock_24"
+                tools:ignore="HardcodedText" />
+
+            <!-- Pin Button -->
+            <ImageButton
+                android:id="@+id/iv_pin"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Pin Note (2 Coins)"
+                android:padding="12dp"
+                android:src="@drawable/ic_pin_24"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

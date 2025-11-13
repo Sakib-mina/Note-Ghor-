@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_points_store"
+        android:title="Purchase Coins"
+        android:icon="@drawable/ic_money_24" />
+
+    <!-- Privacy Policy item -->
+    <item
+        android:id="@+id/nav_privacy_policy"
+        android:title="Privicy Policy"
+        android:icon="@drawable/ic_privacy"/>
+
+    <!-- Terms of Service item -->
+    <item
+        android:id="@+id/nav_terms_of_service"
+        android:title="Terms of Conditation"
+        android:icon="@drawable/ic_conditions_24" />
+
+    <!-- Support / Contact item -->
+    <item
+        android:id="@+id/nav_support_contact"
+        android:title="Themes"
+        android:icon="@drawable/ic_theme_24" />
+
+    <!-- Delete Account item with red text -->
+    <item
+        android:id="@+id/nav_delete_account"
+        android:title="Log Out"
+        android:icon="@drawable/ic_lock_24"
+        android:iconTint="#F30000"
+        android:titleTextColor="@android:color/holo_red_dark" />
+
+</menu>

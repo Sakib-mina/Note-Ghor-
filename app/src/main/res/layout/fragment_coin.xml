@@ -1,0 +1,107 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#170039"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Buy Coins"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnBuy30"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/guest_btn_bg"
+        android:text="Buy 30 Coins - $0.51"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        tools:ignore="HardcodedText,VisualLintButtonSize" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnBuy61"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/guest_btn_bg"
+        android:text="Buy 61 Coins - $1.01"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        tools:ignore="HardcodedText,VisualLintButtonSize" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnBuy112"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/guest_btn_bg"
+        android:text="Buy 122 Coins - $2.01"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        tools:ignore="HardcodedText,VisualLintButtonSize" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnBuy183"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/guest_btn_bg"
+        android:text="Buy 183 Coins - $3.01"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        tools:ignore="HardcodedText,VisualLintButtonSize" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnBuy244"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/guest_btn_bg"
+        android:text="Buy 244 Coins - $4.01"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        tools:ignore="HardcodedText,VisualLintButtonSize" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnBuy305"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/guest_btn_bg"
+        android:text="Buy 305 Coins - $5.01"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        tools:ignore="HardcodedText,VisualLintButtonSize" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnBuy610"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/guest_btn_bg"
+        android:text="Buy 610 Coins - $10.01"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        tools:ignore="HardcodedText,VisualLintButtonSize" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnBuy915"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/guest_btn_bg"
+        android:text="Buy 915 Coins - $15.01"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        tools:ignore="HardcodedText,VisualLintButtonSize" />
+
+</LinearLayout>

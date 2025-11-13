@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "715627106581",
+    "project_id": "note-ghor",
+    "storage_bucket": "note-ghor.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:715627106581:android:de606df3fff41a48b6d91c",
+        "android_client_info": {
+          "package_name": "com.helaluddin.noteghor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "715627106581-bu4it8avq5evuf8jven72vep19b65m5m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.helaluddin.noteghor",
+            "certificate_hash": "fd89415d12299234b9f5a581efe5475e5d600008"
+          }
+        },
+        {
+          "client_id": "715627106581-in1loscg3qiim4kkm2t4kb0s66nku339.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPH9l3xnbEX8we-nCW14OH-49bVLvYp2Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "715627106581-in1loscg3qiim4kkm2t4kb0s66nku339.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

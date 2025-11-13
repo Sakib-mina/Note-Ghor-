@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Note Ghor</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="default_web_client_id">715627106581-in1loscg3qiim4kkm2t4kb0s66nku339.apps.googleusercontent.com</string>
+</resources>
